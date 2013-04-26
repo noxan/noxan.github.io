@@ -21,7 +21,7 @@ footer {
   font-size: 140px;
 }
 
-.icon-contact:hover {
+a:hover {
   text-decoration: none;
 }
 
