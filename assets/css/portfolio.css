@@ -12,6 +12,13 @@ footer {
   margin-top: 140px;
 }
 
+.icon-contact {
+  font-size: 140px;
+}
+
+.icon-contact:hover {
+  text-decoration: none;
+}
 
 /* CUSTOMIZE THE NAVBAR */
 
