@@ -6,6 +6,13 @@
   background-color: #cccccc;
 }
 
+footer {
+  border-top: 1px solid #eee;
+  padding: 60px 0 40px 0;
+  margin-top: 140px;
+}
+
+
 /* CUSTOMIZE THE NAVBAR */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
