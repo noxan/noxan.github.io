@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
     <![endif]-->
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar">
     <div class="navbar-wrapper">
       <div class="container">
         <div class="navbar">
@@ -22,6 +22,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+            <a class="brand hidden-desktop" href="#">Portfolio &middot; Richard Stromer</a>
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li><a href="#home">Home</a></li>
@@ -53,16 +54,16 @@
     </div>
 
     <div class="content">
-      <section style="margin-bottom: 120px;">
+      <section class="visible-desktop" style="margin-bottom: 120px;">
         <div class="page-header">
-          <a name="home"></a>
+          <a id="home" name="home"></a>
           <h1 class="muted center">Portfolio &middot; Richard Stromer</h1>
         </div>
       </section>
 
       <section>
         <div class="page-header">
-          <a name="projects"></a>
+          <a id="projects" name="projects"></a>
           <h2 class="muted center">Projects</h2>
         </div>
 
@@ -122,7 +123,7 @@
 
       <section>
         <div class="page-header">
-          <a name="technology"></a>
+          <a id="technology" name="technology"></a>
           <h2 class="muted center">Technology</h2>
         </div>
         <div class="container">
@@ -131,11 +132,13 @@
               <img src="assets/img/unity3d.png" style="height: 140px; width: 140px" alt="140x140">
               <h2>Unity 3D</h2>
               <p><a class="btn" href="http://unity3d.com/" target="_blank">Visit official website &raquo;</a></p>
+              <div class="visible-phone" style="height: 20px;"></div>
             </div>
             <div class="span4 center">
               <img src="assets/img/django.png" style="height: 140px; width: 140px" alt="140x140" class="img-circle">
               <h2>Django</h2>
               <p><a class="btn" href="https://www.djangoproject.com/" target="_blank">Visit official website &raquo;</a></p>
+              <div class="visible-phone" style="height: 20px;"></div>
             </div>
             <div class="span4 center">
               <img src="assets/img/debian.jpg" style="height: 140px; width: 140px" alt="140x140" class="img-circle">
@@ -148,15 +151,16 @@
 
       <section>
         <div class="page-header">
-          <a name="about"></a>
+          <a id="about" name="about"></a>
           <h2 class="muted center">About</h2>
         </div>
         <div class="container">
           <div class="row">
-            <div class="span3">
-              <img src="assets/img/me.jpg" style="width: 270px; height: 360px;" alt="270x360">
+            <div class="span3 center">
+              <img src="assets/img/me.jpg" alt="270x360">
             </div>
-            <div class="span8 offset1" style="margin-top: 60px;">
+            <div class="span8 offset1">
+              <div class="visible-desktop" style="margin-top: 60px;"></div>
               <h3>Hi,</h3>
               <p class="lead">my name is Richard Stromer (alias &ldquo;noxan&rdquo;). I'm studying Computer Science in at the <a href="http://www.hs-augsburg.de/en/" target="_blank">University of Applied Sciences</a> in Augsburg (Munich). Apart from studying I work as freelance developer (and secondary as designer) with focus on the <a href="#projects">web and game industry</a> since last October. I always look forward to learn new <a href="#technology">technologies</a> as well as other creative minds to collaborate on even bigger projects... <span style="color: white;">and I have a hidden passion for photography!</span></p>
             </div>
@@ -166,29 +170,30 @@
 
       <section>
         <div class="page-header">
-          <a name="contact"></a>
+          <a id="contact" name="contact"></a>
           <h2 class="muted center">Contact</h2>
         </div>
         <div class="container">
-          <div class="row" style="margin-top: 120px;">
+          <div class="visible-desktop" style="margin-top: 120px;"></div>
+          <div class="row">
             <div class="span3 center">
               <a href="mailto:richard.stromer@byteweaver.net" target="_blank">
-                <i class="icon-envelope-alt icon-contact"></i>
+                <p><i class="icon-envelope-alt icon-contact"></i></p>
               </a>
             </div>
             <div class="span3 center">
               <a href="https://github.com/noxan" target="_blank">
-                <i class="icon-github icon-contact"></i>
+                <p><i class="icon-github icon-contact"></i></p>
               </a>
             </div>
             <div class="span3 center">
               <a href="http://www.linkedin.com/pub/richard-stromer/57/10a/44b" target="_blank">
-                <i class="icon-linkedin icon-contact"></i>
+                <p><i class="icon-linkedin icon-contact"></i></p>
               </a>
             </div>
             <div class="span3 center">
               <a href="https://www.xing.com/profile/Richard_Stromer" target="_blank">
-                <i class="icon-group icon-contact"></i>
+                <p><i class="icon-group icon-contact"></i></p>
               </a>
             </div>
           </div>
