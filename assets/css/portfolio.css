@@ -147,6 +147,10 @@ a:hover {
     width: auto;
     height: 500px;
   }
+  footer {
+    padding: 30px 0 20px 0;
+    margin-top: 70px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -187,5 +191,9 @@ a:hover {
   .carousel-caption .lead,
   .carousel-caption .btn {
     font-size: 18px;
+  }
+  footer {
+    padding: 30px 0 20px 0;
+    margin-top: 70px;
   }
 }
