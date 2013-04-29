@@ -18,10 +18,10 @@ $(function() {
       var project = $(this).attr('data-project');
       $('#projects-modal > .modal-body').load('projects/'+project+'.html');
       $('#projects-modal-label').html(this.text);
+
+      centerModal();
     });
   });
-
-  centerModal();
 
   $(window).resize(function() {
     centerModal();
