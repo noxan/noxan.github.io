@@ -7,23 +7,26 @@
 $(function() {
   function centerModal() {
     $('#projects-modal').css({
-      'top': function () {
+      'margin-top': function () {
         return ($(window).height()-$(this).height())/2;
-      }
+      },
+      'top': 0
     });
   }
 
   $(function() {
     $('a[data-project]').click(function(evt) {
       var project = $(this).attr('data-project');
-      $('#projects-modal > .modal-body').load('projects/'+project+'.html');
       $('#projects-modal-label').html(this.text);
-
-      centerModal();
+      $('#projects-modal > .modal-body').load('projects/'+project+'.html', function(response, status, xhr) {
+        centerModal();
+      });
     });
   });
 
   $(window).resize(function() {
     centerModal();
   });
+
+  centerModal();
 });
