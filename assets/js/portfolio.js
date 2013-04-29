@@ -13,6 +13,14 @@ $(function() {
     });
   }
 
+  $(function() {
+    $('a[data-project]').click(function(evt) {
+      var project = $(this).attr('data-project');
+      $('#projects-modal > .modal-body').load('projects/'+project+'.html');
+      $('#projects-modal-label').html(this.text);
+    });
+  });
+
   centerModal();
 
   $(window).resize(function() {
