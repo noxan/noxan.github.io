@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "description": "online portfolio of noxan",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noxan/portfolio.git"
+  },
+  "devDependencies": {
+    "grunt-devserver": "*"
+  }
+}
