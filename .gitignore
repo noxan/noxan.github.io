@@ -1,2 +1,4 @@
+*.swp
+*.swo
 /public/vendor/
 /node_modules/
