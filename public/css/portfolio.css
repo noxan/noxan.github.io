@@ -90,13 +90,12 @@ img {
   height: 125px;
   border-radius: 125px;
 }
+.img-circle.large {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
 
 .cntr {
   text-align: center;
-}
-
-.img-circle.text {
-  box-sizing: content-box;
-  font-size: 150px;
-  background-color: #cfcfcf;
 }
