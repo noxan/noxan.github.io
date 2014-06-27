@@ -25,6 +25,12 @@ h4 {
 p {
   font-size: 18px;
 }
+a {
+  color: #cccccc;
+}
+a:hover {
+  color: #cccccc;
+}
 
 main {
   height: 100%;
@@ -43,6 +49,12 @@ section {
 }
 section.blue {
   background-color: #317e95;
+  color: #ffffff;
+}
+section.blue a {
+  color: #ffffff;
+}
+section.blue a:hover {
   color: #ffffff;
 }
 section.grey {
