@@ -1,6 +1,8 @@
 {
   "name": "portfolio",
   "description": "online portfolio of noxan",
+  "version": "0.0.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git://github.com/noxan/portfolio.git"
