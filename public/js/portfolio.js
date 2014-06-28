@@ -1,6 +1,8 @@
+/*
 (function($) {
   var s = skrollr.init();
 })(jQuery);
+*/
 
 
 // google analytics
