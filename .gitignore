@@ -1,2 +1,6 @@
 *.swp
 *.swo
+
+Gemfile.lock
+
+/_site/
