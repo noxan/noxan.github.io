@@ -1,3 +1,6 @@
 [submodule "vendor/jeet"]
 	path = vendor/jeet
 	url = git@github.com:mojotech/jeet.git
+[submodule "vendor/normalize"]
+	path = vendor/normalize
+	url = git@github.com:necolas/normalize.css.git
