@@ -1,5 +1,10 @@
 (function() {
   'use strict';
+
+  var app = angular.module('noxan', []);
+})();
+(function() {
+  'use strict';
   var lastItem;
 
   var nav = document.querySelector('nav');
