@@ -23,8 +23,6 @@ function removeClass(elem, className) {
   var nav = document.querySelector('nav');
   var navItems = nav.querySelectorAll('a');
 
-  console.log(navItems);
-
   var scrollItems = Array.prototype.map.call(navItems, function(item) {
     return item.getAttribute('href');
   });
