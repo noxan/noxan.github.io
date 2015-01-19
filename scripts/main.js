@@ -32,7 +32,7 @@ function removeClass(elem, className) {
     scrollTop = scrollTop + 32 + 1; // offset
 
     var currentItem = scrollItems.map(function(item) {
-      var ele = document.getElementById(item.replace('#', ''));
+      var ele = document.getElementById(item.replace('/#', ''));
       if(ele && ele.offsetTop < scrollTop) {
         return item;
       }
