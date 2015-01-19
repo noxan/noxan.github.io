@@ -27,7 +27,7 @@ function removeClass(elem, className) {
     return item.getAttribute('href');
   });
 
-  window.addEventListener('scroll', function() {
+  var scrollHandler = function() {
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     scrollTop = scrollTop + 32 + 1; // offset
 
@@ -49,5 +49,11 @@ function removeClass(elem, className) {
       lastItem = currentItem;
       addClass(nav.querySelector('[href="' + currentItem + '"]').parentNode, 'active');
     }
+  };
+
+  window.addEventListener('DOMContentLoaded', function() {
+    scrollHandler();
   });
+
+  window.addEventListener('scroll', scrollHandler);
 })();
