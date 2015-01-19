@@ -2,6 +2,10 @@
   'use strict';
 
   var app = angular.module('noxan', []);
+
+  app.config(['$interpolateProvider', function($interpolateProvider) {
+    return $interpolateProvider.startSymbol('{$').endSymbol('$}');
+  }]);
 })();
 (function() {
   'use strict';
