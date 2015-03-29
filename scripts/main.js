@@ -6,6 +6,12 @@
   app.config(['$interpolateProvider', function($interpolateProvider) {
     return $interpolateProvider.startSymbol('{$').endSymbol('$}');
   }]);
+
+  app.controller('ProjectCtrl', ['$scope', function($scope) {
+    $scope.projects = [
+      {name: 'devisio', url: 'http://www.devisio.net'}
+    ];
+  }]);
 })();
 (function() {
   'use strict';

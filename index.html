@@ -16,18 +16,8 @@ layout: default
 <a id="projects"></a>
 <h1>Projects</h1>
 
-<div class="projects">
-  <a href="#projects"><span>devisio</span></a>
-  <a href="#projects"><span>kids fashion groups</span></a>
-  <a href="#projects" style="background-image: url('/images/projects/mybraintraining.jpg');"><span>mybraintraining</span></a>
-  <a href="#projects"><span>byteweaver</span></a>
-  <a href="#projects"><span>vodafone speedlane</span></a>
-  <a href="#projects"><span>moonid</span></a>
-  <a href="#projects"><span>orbarena</span></a>
-  <a href="#projects"><span>aves</span></a>
-  <a href="#projects"><span>jtdge</span></a>
-  <a href="#projects"><span>takidi</span></a>
-  <a href="https://github.com/noxan?tab=repositories"><span>and more...</span></a>
+<div class="projects" ng-controller="ProjectCtrl">
+  <a ng-repeat="project in projects" href="{$project.link$}"><span>{$project.name$}</span></a>
 </div>
 
 <a id="technology"></a>
