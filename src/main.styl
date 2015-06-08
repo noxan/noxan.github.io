@@ -1,6 +1,7 @@
 @import "~normalize.css/normalize.css"
 
 background-color = #fff
+background-alt-color = #eee
 text-color = #333
 link-color = #666
 link-hover-color = #00b2ff
@@ -42,7 +43,9 @@ section
   &.no-padding // remove padding from content again
     margin-top -100px
   &:not(.no-padding):not(.screen)
-    padding-bottom 200px
+    padding 200px 0
+  &:nth-of-type(2n)
+    background-color background-alt-color
   &.screen
     padding-bottom 50%
   .screen-content
