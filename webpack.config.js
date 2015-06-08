@@ -16,6 +16,10 @@ module.exports = {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: "jscs-loader"
+    },  {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: "jshint-loader"
     }]
   },
   devServer: {
