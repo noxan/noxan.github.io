@@ -10,7 +10,7 @@ angular.module("noxan", ["ui.router"]);
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state("home", {
     url: "/",
-    templateUrl: "partials/home.html"
+    template: require("./partials/home.jade")
   });
 
   $urlRouterProvider.otherwise("/");
