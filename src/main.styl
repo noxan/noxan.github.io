@@ -4,6 +4,8 @@ text-color = #333
 link-color = #666
 link-hover-color = #00b2ff
 link-active-color = #000
+transition-time = 100ms
+transition-timing-function = cubic-bezier(0, 0.5, 0.5, 1)
 
 body
   font-family: 'Source Sans Pro', sans-serif
@@ -31,7 +33,7 @@ h1, h2, h3, h4, h5, h6
 a
   color link-color
   text-decoration none
-  transition 100ms cubic-bezier(0, 0.5, 0.5, 1) color
+  transition transition-time transition-timing-function color
   &:hover
     color link-hover-color
   &:active
