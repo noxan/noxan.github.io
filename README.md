@@ -8,10 +8,6 @@ Install dependencies:
 
     $ npm install
 
-Compile base template:
-
-    $ npm run jade
-
 Run development server:
 
     $ npm run dev
