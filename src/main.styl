@@ -37,6 +37,24 @@ a
   &:active
     color link-active-color
 
+section
+  position relative
+  padding-bottom 50%
+  &.no-padding // remove padding from content again
+    margin-top -100px
+  .screen
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    .screen-center
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      text-align center
+
 .container
   width: 80%
   max-width: 700px
@@ -61,17 +79,3 @@ main
     margin 0 0 300px 0 // height of footer
 
   @import "footer"
-
-
-/* .wrapper
-  position relative
-  width 100%
-  height 100%
-  .wrapper-inner
-    width 100%
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-@import "animation" */
