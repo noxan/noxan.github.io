@@ -1,7 +1,8 @@
 var angular = require("angular");
-var router = require("angular-ui-router");
+require("angular-ui-router");
+require("angular-animate");
 
-angular.module("noxan", ["ui.router"]);
+angular.module("noxan", ["ui.router", "ngAnimate"]);
 
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
