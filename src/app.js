@@ -49,5 +49,6 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
   $urlRouterProvider.otherwise("/");
 }]);
 
+require("./scroll-directive");
 require("./navigation");
 require("./blog");
