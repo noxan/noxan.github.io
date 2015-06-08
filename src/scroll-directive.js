@@ -1,7 +1,6 @@
 var scrollHandler = function (state, $document) {
   if (state.params && state.params.hasOwnProperty("scrollTo")) {
-    var id = state.params.scrollTo;
-    var element = document.getElementById(id);
+    var element = document.getElementById(state.params.scrollTo);
     if (element) {
       $document.scrollToElementAnimated(angular.element(element));
     }
@@ -10,7 +9,7 @@ var scrollHandler = function (state, $document) {
 
 angular.module("noxan").directive("scrollManager", ["$rootScope", "$state", "$document", function ($rootScope, $state, $document) {
   return {
-    link: function($scope, $element, $attrs) {
+    link: function ($scope, $element, $attrs) {
       scrollHandler($state.current, $document);
 
       removeListener = $rootScope.$on("$stateChangeSuccess", function (event) {
