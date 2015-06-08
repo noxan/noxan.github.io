@@ -1,10 +1,14 @@
 ul.left
   li(ui-sref-active="active")
     a(ui-sref="home") Home
-  li Work
-  li Technology
-  li About
-  li Contact
+  li(ui-sref-active="active")
+    a(ui-sref="home.work") Work
+  li(ui-sref-active="active")
+    a(ui-sref="home.technology") Technology
+  li(ui-sref-active="active")
+    a(ui-sref="home.about") About
+  li(ui-sref-active="active")
+    a(ui-sref="home.contact") Contact
 
 ul.right
   li(ui-sref-active="active")
