@@ -19,3 +19,4 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
 }]);
 
 require("./navigation");
+require("./blog");
