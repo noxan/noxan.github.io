@@ -39,21 +39,16 @@ a
 
 section
   position relative
-  padding-bottom 50%
   &.no-padding // remove padding from content again
     margin-top -100px
-  .screen
+  &.screen
+    padding-bottom 50%
+  .screen-content
     position absolute
-    top 0
-    bottom 0
-    left 0
-    right 0
-    .screen-center
-      position absolute
-      top 50%
-      left 50%
-      transform translate(-50%, -50%)
-      text-align center
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    text-align center
 
 .container
   width: 80%
