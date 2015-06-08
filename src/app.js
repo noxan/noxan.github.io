@@ -8,7 +8,31 @@ angular.module("noxan", ["ui.router", "ngAnimate", "duScroll"]);
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
     url: "/",
+    params: {
+      scrollTo: "top"
+    },
     template: require("./partials/home.jade")
+  }).state("home.work", {
+    url: "^/work",
+    params: {
+      scrollTo: "work"
+    },
+    template: require("./partials/home.jade")
+  }).state("home.technology", {
+    url: "^/technology",
+    params: {
+      scrollTo: "technology"
+    }
+  }).state("home.about", {
+    url: "^/about",
+    params: {
+      scrollTo: "about"
+    }
+  }).state("home.contact", {
+    url: "^/contact",
+    params: {
+      scrollTo: "contact"
+    }
   }).state("demo", {
     url: "/demo",
     template: require("./partials/demo.jade")
