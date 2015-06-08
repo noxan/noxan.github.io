@@ -6,6 +6,7 @@ module.exports = {
   },
   module: {
     loaders: [
+      { test: /\.json$/, loader: "json-loader" },
       { test: /(?!\.html)\.jade$/, loader: "jade-loader" },
       { test: /index\.html\.jade$/, loader: "file-loader?name=[path][name]&context=./src!jade-html-loader" },
       { test: /\.styl$/, loader: "style-loader!css-loader!stylus-loader" },
