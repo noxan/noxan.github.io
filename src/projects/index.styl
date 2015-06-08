@@ -5,10 +5,16 @@
     width 30%
     margin 1.51515%
     background-color background-color
-    transition transition-time transition-timing-function transform
+    transition transition-time transition-timing-function
+    color link-color
+    cursor pointer
 
     &:hover
       transform scale(1.1)
+      color link-hover-color
+
+    &:active
+      color link-active-color
 
     .image
       width 100%
