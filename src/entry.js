@@ -7,11 +7,13 @@ var router = require("angular-ui-router");
 
 angular.module("noxan", ["ui.router"]);
 
-angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
     url: "/",
     template: require("./partials/home.jade")
   });
+
+  $locationProvider.html5Mode(true);
 
   $urlRouterProvider.otherwise("/");
 }]);
