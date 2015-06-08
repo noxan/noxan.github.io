@@ -3,7 +3,7 @@ angular.module("noxan").controller("HomeController", [function () {
 
   ctrl.projects = require("./data/projects.json").map(function (project) {
     if (!project.hasOwnProperty("image")) {
-      project.image = "//placehold.it/400";
+      project.image = "//placehold.it/400?text=" + project.name;
     }
     return project;
   });
