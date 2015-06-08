@@ -39,6 +39,8 @@
     "file-loader": "^0.8.4",
     "image-webpack-loader": "^1.4.0",
     "imagemin": "^3.2.0",
+    "jscs": "^1.13.1",
+    "jscs-loader": "^0.1.0",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.0",
     "webpack": "^1.9.10",
