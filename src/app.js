@@ -2,8 +2,9 @@ var angular = require("angular");
 require("angular-ui-router");
 require("angular-animate");
 require("angular-scroll");
+require("angular-background-image");
 
-angular.module("noxan", ["ui.router", "ngAnimate", "duScroll"]);
+angular.module("noxan", ["ui.router", "ngAnimate", "duScroll", "backgroundImage"]);
 
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
