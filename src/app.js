@@ -17,3 +17,9 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
 
   $urlRouterProvider.otherwise("/");
 }]);
+
+angular.module("noxan").directive("navigation", [function () {
+  return {
+    template: require("./navigation/template.jade")
+  };
+}]);
