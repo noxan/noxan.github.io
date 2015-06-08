@@ -6,12 +6,12 @@ Personal website and portfolio of Richard.
 
 Install dependencies:
 
-  $ npm install
+    $ npm install
 
 Compile base template:
 
-  $ npm run jade
+    $ npm run jade
 
 Run development server:
 
-  $ npm run dev
+    $ npm run dev
