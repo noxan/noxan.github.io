@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --progress --colors",
-    "jade": "jade --out dist/ -- src/"
+    "dev": "webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
   "homepage": "https://github.com/noxan/noxan.net",
   "dependencies": {
     "angular": "^1.3.16",
+    "jade-html-loader": "0.0.2",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
@@ -33,7 +33,6 @@
     "file-loader": "^0.8.4",
     "image-webpack-loader": "^1.4.0",
     "imagemin": "^3.2.0",
-    "jade": "^1.10.0",
     "style-loader": "^0.12.3",
     "stylus-loader": "^1.2.0",
     "webpack": "^1.9.10",
