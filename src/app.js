@@ -11,6 +11,9 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
   }).state("demo", {
     url: "/demo",
     template: require("./partials/demo.jade")
+  }).state("labs", {
+    url: "/labs",
+    template: require("./labs/partials/list.jade")
   }).state("blog", {
     url: "/blog",
     template: require("./blog/partials/list.jade")
