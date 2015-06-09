@@ -2,18 +2,22 @@
   "experiments": [
     {
       "name": "webapp playground",
+      "image": "//placehold.it/400?text=web+app",
       "website": "https://github.com/noxan/webapp-playground"
     }
   ],
   "projects": [
     {
       "name": "As It Seems",
+      "image": "http://globalgamejam.org/sites/default/files/styles/game_sidebar__wide/public/game/featured_image/screenshot_03_0_0.png",
       "website": "http://globalgamejam.org/2014/games/it-seems"
     }, {
       "name": "aves",
+      "image": "//placehold.it/400?text=Java+Network+Server",
       "website": "https://github.com/noxan/aves"
     }, {
       "name": "jtdge",
+      "image": "//placehold.it/400?text=Java+Game+Engine",
       "website": "https://github.com/noxan/jtdge"
     }
   ]
