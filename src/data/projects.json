@@ -8,12 +8,14 @@
     "website": "http://www.mybraintraining.com",
     "image": "https://noxan.github.io/images/projects/mybraintraining.jpg"
   }, {
+    "name": "magnet"
+  }, {
+    "name": "Speedlane"
+  }, {
     "name": "devisio",
     "website": "https://www.devisio.net",
     "image": "https://noxan.github.io/images/projects/devisio.jpg"
   }, {
-    "name": "Speedlane"
-  }, {
-    "name": "magnet"
+    "name": "Bierbaum"
   }
 ]
