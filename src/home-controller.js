@@ -7,4 +7,6 @@ angular.module("noxan").controller("HomeController", [function () {
     }
     return project;
   });
+
+  ctrl.technologies = require("./data/technologies.json");
 }]);
