@@ -15,14 +15,14 @@ section#work
 section#technology(ng-controller="TechnologiesController as vm")
   .container
     h1 Technology
-    p Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit.
+    p My focus is on state of the art web technologies. I know the full stack as a developer. Sometimes I even do the design. And handling the deployment is mandatory to set sails. Building games is fun at last and still my business.
     .technologies
       .technology(ng-repeat="technology in vm.technologies" ng-style="{'background-color': '{{technology.color}}'}" ng-show="technology.show")
         span {{technology.name}}
       .clearfix
     p
       a(ng-click="vm.showAll()" ng-show="vm.hasHidden()").technology-show-button Your technology is missing? I know some more...
-      .technology-additional-info(ng-hide="vm.hasHidden()") Still missing? No problem, I am always curious to learn new technologies...
+      .technology-additional-info(ng-hide="vm.hasHidden()") Still missing? Awesome, I am always curious to learn!
 section#about
   .container
     h1 About
