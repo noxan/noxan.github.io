@@ -1,3 +1,8 @@
+// webpack
+require("./index.html.jade");
+require("./main.styl");
+
+// start app
 var angular = require("angular");
 require("angular-ui-router");
 require("angular-animate");
