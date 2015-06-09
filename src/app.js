@@ -1,49 +1,46 @@
+// webpack
+require("./index.html.jade");
+require("./main.styl");
+
+// start app
 var angular = require("angular");
 require("angular-ui-router");
 require("angular-animate");
 require("angular-scroll");
 require("angular-background-image");
 
-require("./labs");
-
 angular.module("noxan", [
   "ui.router", "ngAnimate", "duScroll", "backgroundImage",
+  "noxan.portfolio",
   "noxan.labs"
 ]);
+
+require("./portfolio");
+require("./labs");
+require("./blog");
+
+require("./core/scroll.directive");
 
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
     url: "/",
-    controller: "HomeController",
-    controllerAs: "ctrl",
-    params: {
-      scrollTo: "top"
-    },
-    template: require("./partials/home.jade")
+    params: { scrollTo: "top" },
+    template: require("./portfolio/index.tmpl.jade")
   }).state("home.work", {
     url: "^/work",
-    params: {
-      scrollTo: "work"
-    },
-    template: require("./partials/home.jade")
+    params: { scrollTo: "work" }
   }).state("home.technology", {
     url: "^/technology",
-    params: {
-      scrollTo: "technology"
-    }
+    params: { scrollTo: "technology" }
   }).state("home.about", {
     url: "^/about",
-    params: {
-      scrollTo: "about"
-    }
+    params: { scrollTo: "about" }
   }).state("home.contact", {
     url: "^/contact",
-    params: {
-      scrollTo: "contact"
-    }
+    params: { scrollTo: "contact" }
   }).state("demo", {
     url: "/demo",
-    template: require("./partials/demo.jade")
+    template: require("./core/demo.tmpl.jade")
   }).state("labs", {
     url: "/labs",
     controller: "LabsController",
@@ -58,8 +55,3 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
 
   $urlRouterProvider.otherwise("/");
 }]);
-
-require("./home-controller");
-require("./scroll-directive");
-require("./navigation");
-require("./blog");

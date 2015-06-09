@@ -79,15 +79,17 @@ main
   min-height 100%
   overflow auto
 
-  @import "navigation"
+  @import "core/navigation"
 
   content
     display block
     padding 100px 0
     margin 0 0 350px 0 // height of footer
 
-  @import "footer"
+  @import "core/footer"
 
-@import "projects"
-@import "technologies"
-@import "clearfix"
+@import "portfolio/projects"
+@import "portfolio/technologies"
+
+@import "core/styles/clearfix"
+//@import "core/styles/animation"
