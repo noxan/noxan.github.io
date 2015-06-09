@@ -21,7 +21,8 @@ section#technology(ng-controller="TechnologiesController as vm")
         span {{technology.name}}
       .clearfix
     p
-      a(ng-click="vm.showAll()" ng-show="vm.hasHidden()").technology-show-button Show more
+      a(ng-click="vm.showAll()" ng-show="vm.hasHidden()").technology-show-button Your technology is missing? I know some more...
+      .technology-additional-info(ng-hide="vm.hasHidden()") Still missing? No problem, I am always curious to learn new technologies...
 section#about
   .container
     h1 About
