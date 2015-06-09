@@ -7,6 +7,8 @@ require("angular-background-image");
 require("./portfolio");
 require("./labs");
 
+require("./core/scroll.directive");
+
 angular.module("noxan", [
   "ui.router", "ngAnimate", "duScroll", "backgroundImage",
   "noxan.portfolio",
@@ -48,5 +50,4 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
   $urlRouterProvider.otherwise("/");
 }]);
 
-require("./scroll-directive");
 require("./blog");
