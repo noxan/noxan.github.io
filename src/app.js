@@ -9,17 +9,17 @@ require("angular-animate");
 require("angular-scroll");
 require("angular-background-image");
 
-require("./portfolio");
-require("./labs");
-require("./blog");
-
-require("./core/scroll.directive");
-
 angular.module("noxan", [
   "ui.router", "ngAnimate", "duScroll", "backgroundImage",
   "noxan.portfolio",
   "noxan.labs"
 ]);
+
+require("./portfolio");
+require("./labs");
+require("./blog");
+
+require("./core/scroll.directive");
 
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
