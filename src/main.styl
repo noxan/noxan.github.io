@@ -40,10 +40,12 @@ a
 
 section
   position relative
-  &.no-padding // remove padding from content again
+  &.no-margin, &.no-padding // remove padding from content again
     margin-top -100px
   &:not(.no-padding):not(.screen)
     padding 200px 0
+  &.small-padding:not(.screen)
+    padding 100px 0
   &:nth-of-type(2n)
     background-color background-alt-color
   &.screen
