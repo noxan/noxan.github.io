@@ -1,11 +1,11 @@
 require("./projects.module");
-require("./technology");
+require("./technologies.module");
 require("./about");
 require("./contact");
 
 angular.module("noxan.portfolio", [
   "noxan.portfolio.projects",
-  "noxan.portfolio.technology",
+  "noxan.portfolio.technologies",
   "noxan.portfolio.about",
   "noxan.portfolio.contact"
 ]);
