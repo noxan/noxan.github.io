@@ -6,7 +6,7 @@ section.small-padding.no-margin
 section.small-padding
   .container
     .projects
-      a.project(href="https://github.com/noxan/webapp-playground")
-        .image(background-image="//placehold.it/400?text=webapp")
-        h3 webapp playground
+      a.project(href="https://github.com/noxan/webapp-playground" ng-repeat="experiment in labs.experiments")
+        .image(background-image="//placehold.it/400?text={{experiment.name}}")
+        h3 {{experiment.name}}
     .clearfix

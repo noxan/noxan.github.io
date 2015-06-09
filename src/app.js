@@ -4,7 +4,12 @@ require("angular-animate");
 require("angular-scroll");
 require("angular-background-image");
 
-angular.module("noxan", ["ui.router", "ngAnimate", "duScroll", "backgroundImage"]);
+require("./labs");
+
+angular.module("noxan", [
+  "ui.router", "ngAnimate", "duScroll", "backgroundImage",
+  "noxan.labs"
+]);
 
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
@@ -41,6 +46,8 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
     template: require("./partials/demo.jade")
   }).state("labs", {
     url: "/labs",
+    controller: "LabsController",
+    controllerAs: "labs",
     template: require("./labs/partials/list.jade")
   }).state("blog", {
     url: "/blog",
