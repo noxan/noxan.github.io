@@ -19,13 +19,12 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
     params: {
       scrollTo: "top"
     },
-    template: require("./partials/home.jade")
+    template: require("./portfolio/index.tmpl.jade")
   }).state("home.work", {
     url: "^/work",
     params: {
       scrollTo: "work"
-    },
-    template: require("./partials/home.jade")
+    }
   }).state("home.technology", {
     url: "^/technology",
     params: {
