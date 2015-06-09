@@ -398,7 +398,7 @@
 
 	exports = module.exports = __webpack_require__(6)();
 	exports.i(__webpack_require__(7), "");
-	exports.push([module.id, "\nbody {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-family: 'Yantramanav', sans-serif;\n  font-family: 'Palanquin', sans-serif;\n  font-weight: 300;\n  text-shadow: 0 0 1px rgba(0,0,0,0.1);\n  color: #333;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  font-size: 20px;\n  line-height: 1.5;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Raleway', sans-serif;\n  font-weight: 400;\n}\na {\n  color: #666;\n  text-decoration: none;\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1) color;\n}\na:hover {\n  color: #00b2ff;\n}\na:active {\n  color: #000;\n}\nsection {\n  position: relative;\n}\nsection.no-margin,\nsection.no-padding {\n  margin-top: -100px;\n}\nsection:not(.no-padding):not(.screen) {\n  padding: 200px 0;\n}\nsection.small-padding:not(.screen) {\n  padding: 100px 0;\n}\nsection:nth-of-type(2n) {\n  background-color: #eee;\n}\nsection.screen {\n  padding-bottom: 50%;\n}\nsection .screen-content {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}\n.container {\n  width: 80%;\n  max-width: 700px;\n  margin: 0 auto;\n  text-align: center;\n}\n.teaser {\n  font-size: 3em;\n  line-height: 1.2;\n}\n.teaser h1,\n.teaser h2,\n.teaser h3,\n.teaser p {\n  margin: 0;\n}\nhtml,\nbody {\n  height: 100%;\n}\nmain {\n  position: relative;\n  min-height: 100%;\n  overflow: auto;\n}\nmain navigation {\n  z-index: 1000;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\nmain navigation ul {\n  margin: 10px 20px;\n  padding: 0;\n  list-style: none;\n}\nmain navigation ul.left {\n  float: left;\n}\nmain navigation ul.right {\n  float: right;\n}\nmain navigation ul li {\n  float: left;\n  padding: 10px;\n  position: relative;\n}\nmain navigation ul li:after {\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  content: \"\";\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1) all;\n  background-color: #666;\n  background: linear-gradient(rgba(0,0,0,0), #666);\n  width: 100%;\n  height: 5px;\n  opacity: 0;\n  z-index: -1;\n}\nmain navigation ul li.active:after {\n  opacity: 1;\n  height: 1px;\n  background-color: #000;\n  background: linear-gradient(rgba(0,0,0,0), #000);\n}\nmain navigation ul li.active a {\n  color: #000;\n}\nmain content {\n  display: block;\n  padding: 100px 0;\n  margin: 0 0 350px 0;\n}\nmain footer {\n  height: 250px;\n  background-color: #333;\n  color: #fff;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding: 50px 0;\n}\nmain footer .container {\n  text-align: left;\n}\nmain footer ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.projects .project {\n  float: left;\n  width: 30%;\n  margin: 1.51515%;\n  background-color: #fff;\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1);\n  color: #666;\n  cursor: pointer;\n}\n.projects .project:hover {\n  transform: scale(1.1);\n  color: #00b2ff;\n}\n.projects .project:active {\n  color: #000;\n}\n.projects .project .image {\n  width: 100%;\n  padding-bottom: 100%;\n  background-size: cover;\n  background-position: 50%;\n}\nsection:nth-of-type(2n+1) .projects .project {\n  background-color: #eee;\n}\n.technologies .technology {\n  display: inline-block;\n  width: 17%;\n  padding-bottom: 17%;\n  margin: 1.5%;\n  float: left;\n  height: 0;\n  position: relative;\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1);\n  cursor: pointer;\n}\n.technologies .technology:hover {\n  transform: scale(1.1);\n}\n.technologies .technology span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  margin: 0;\n}\n.clearfix:after {\n  visibility: hidden;\n  display: block;\n  font-size: 0;\n  content: \" \";\n  clear: both;\n  height: 0;\n}\n* html .clearfix {\n  zoom: 1;\n}\n*:first-child+html .clearfix {\n  zoom: 1;\n}\n", ""]);
+	exports.push([module.id, "\nbody {\n  font-family: 'Source Sans Pro', sans-serif;\n  font-family: 'Yantramanav', sans-serif;\n  font-family: 'Palanquin', sans-serif;\n  font-weight: 300;\n  text-shadow: 0 0 1px rgba(0,0,0,0.1);\n  color: #333;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  font-size: 20px;\n  line-height: 1.5;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Raleway', sans-serif;\n  font-weight: 400;\n}\na {\n  color: #666;\n  text-decoration: none;\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1) color;\n}\na:hover {\n  color: #00b2ff;\n}\na:active {\n  color: #000;\n}\nsection {\n  position: relative;\n}\nsection.no-margin,\nsection.no-padding {\n  margin-top: -100px;\n}\nsection:not(.no-padding):not(.screen) {\n  padding: 200px 0;\n}\nsection.small-padding:not(.screen) {\n  padding: 100px 0;\n}\nsection:nth-of-type(2n) {\n  background-color: #eee;\n}\nsection.screen {\n  padding-bottom: 50%;\n}\nsection .screen-content {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  text-align: center;\n}\n.container {\n  width: 80%;\n  max-width: 700px;\n  margin: 0 auto;\n  text-align: center;\n}\n.teaser {\n  font-size: 3em;\n  line-height: 1.2;\n}\n.teaser h1,\n.teaser h2,\n.teaser h3,\n.teaser p {\n  margin: 0;\n}\nhtml,\nbody {\n  height: 100%;\n}\nmain {\n  position: relative;\n  min-height: 100%;\n  overflow: auto;\n}\nmain navigation {\n  z-index: 1000;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\nmain navigation ul {\n  margin: 10px 20px;\n  padding: 0;\n  list-style: none;\n}\nmain navigation ul.left {\n  float: left;\n}\nmain navigation ul.right {\n  float: right;\n}\nmain navigation ul li {\n  float: left;\n  padding: 10px;\n  position: relative;\n}\nmain navigation ul li:after {\n  display: block;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  content: \"\";\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1) all;\n  background-color: #666;\n  background: linear-gradient(rgba(0,0,0,0), #666);\n  width: 100%;\n  height: 5px;\n  opacity: 0;\n  z-index: -1;\n}\nmain navigation ul li.active:after {\n  opacity: 1;\n  height: 1px;\n  background-color: #000;\n  background: linear-gradient(rgba(0,0,0,0), #000);\n}\nmain navigation ul li.active a {\n  color: #000;\n}\nmain content {\n  display: block;\n  padding: 100px 0;\n  margin: 0 0 350px 0;\n}\nmain footer {\n  height: 250px;\n  background-color: #333;\n  color: #fff;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding: 50px 0;\n}\nmain footer .container {\n  text-align: left;\n}\nmain footer ul {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.projects .project {\n  float: left;\n  width: 30%;\n  margin: 1.51515%;\n  background-color: #fff;\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1);\n  color: #666;\n  cursor: pointer;\n}\n.projects .project:hover {\n  transform: scale(1.1);\n  color: #00b2ff;\n}\n.projects .project:active {\n  color: #000;\n}\n.projects .project .image {\n  width: 100%;\n  padding-bottom: 100%;\n  background-size: cover;\n  background-position: 50%;\n}\nsection:nth-of-type(2n+1) .projects .project {\n  background-color: #eee;\n}\n.technologies .technology {\n  display: inline-block;\n  width: 17%;\n  padding-bottom: 17%;\n  margin: 1.5%;\n  float: left;\n  height: 0;\n  position: relative;\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1);\n  cursor: pointer;\n  opacity: 1;\n  transform: scale(1);\n}\n.technologies .technology:hover {\n  transform: scale(1.1);\n}\n.technologies .technology span {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  margin: 0;\n}\n.technologies .technology.ng-hide {\n  opacity: 0;\n  transform: scale(0.5);\n}\n.technology-additional-info,\n.technology-show-button {\n  transition: 100ms cubic-bezier(0, 0.5, 0.5, 1);\n  opacity: 1;\n}\n.technology-additional-info.ng-hide,\n.technology-show-button.ng-hide {\n  opacity: 0;\n}\n.technology-show-button {\n  cursor: pointer;\n}\n.clearfix:after {\n  visibility: hidden;\n  display: block;\n  font-size: 0;\n  content: \" \";\n  clear: both;\n  height: 0;\n}\n* html .clearfix {\n  zoom: 1;\n}\n*:first-child+html .clearfix {\n  zoom: 1;\n}\n", ""]);
 
 /***/ },
 /* 6 */
@@ -33792,7 +33792,22 @@
 	function TechnologiesController(Technologies) {
 	  var vm = this;
 
-	  vm.technologies = Technologies.all();
+	  vm.technologies = Technologies.all().map(function (tech, index) {
+	    tech.show = index < 10;
+	    return tech;
+	  });
+
+	  vm.hasHidden = function () {
+	    return vm.technologies.filter(function (tech) {
+	      return !tech.show;
+	    }).length > 0;
+	  };
+
+	  vm.showAll = function () {
+	    vm.technologies.forEach(function (tech) {
+	      tech.show = true;
+	    });
+	  };
 	}
 	TechnologiesController.$inject = ["Technologies"];
 
@@ -33907,6 +33922,18 @@
 		{
 			"name": "C#",
 			"color": "#68217A"
+		},
+		{
+			"name": "Nginx",
+			"color": "#009639"
+		},
+		{
+			"name": "gulp",
+			"color": "#CF4646"
+		},
+		{
+			"name": "webpack",
+			"color": "#98B5E0"
 		}
 	]
 
@@ -33946,16 +33973,24 @@
 		"experiments": [
 			{
 				"name": "webapp playground",
+				"image": "//placehold.it/400?text=web+app",
 				"website": "https://github.com/noxan/webapp-playground"
 			}
 		],
 		"projects": [
 			{
+				"name": "As It Seems",
+				"image": "http://globalgamejam.org/sites/default/files/styles/game_sidebar__wide/public/game/featured_image/screenshot_03_0_0.png",
+				"website": "http://globalgamejam.org/2014/games/it-seems"
+			},
+			{
 				"name": "aves",
+				"image": "//placehold.it/400?text=Java+Network+Server",
 				"website": "https://github.com/noxan/aves"
 			},
 			{
 				"name": "jtdge",
+				"image": "//placehold.it/400?text=Java+Game+Engine",
 				"website": "https://github.com/noxan/jtdge"
 			}
 		]
@@ -34006,7 +34041,7 @@
 	var jade_mixins = {};
 	var jade_interp;
 
-	buf.push("<section class=\"screen no-padding teaser\"><div class=\"screen-content\"><h1>noxan.</h1><p>software developer</p></div></section><section id=\"work\"><div class=\"container\"><h1>Work</h1><p>A selection of my latest projects.</p><div ng-controller=\"ProjectsController as vm\" class=\"projects\"><div ng-repeat=\"project in vm.projects\" class=\"project\"><div background-image=\"{{project.image}}\" class=\"image\"></div><h3>{{project.name}}</h3></div></div><div class=\"clearfix\"></div></div></section><section id=\"technology\"><div class=\"container\"><h1>Technology</h1><p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit.</p><div ng-controller=\"TechnologiesController as vm\" class=\"technologies\"><div ng-repeat=\"technology in vm.technologies\" ng-style=\"{'background-color': '{{technology.color}}'}\" class=\"technology\"><span>{{technology.name}}</span></div><div class=\"clearfix\"></div></div></div></section><section id=\"about\"><div class=\"container\"><h1>About</h1><p>Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt. Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.</p></div></section><section id=\"contact\"><div class=\"container\"><h1>Contact</h1><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In euismod ultrices facilisis. Vestibulum porta sapien adipiscing augue congue id pretium lectus molestie. Proin quis dictum nisl. Morbi id quam sapien, sed vestibulum sem. Duis elementum rutrum mauris sed convallis. Proin vestibulum magna mi. Aenean tristique hendrerit magna, ac facilisis nulla hendrerit ut. Sed non tortor sodales quam auctor elementum. Donec hendrerit nunc eget elit pharetra pulvinar. Suspendisse id tempus tortor. Aenean luctus, elit commodo laoreet commodo, justo nisi consequat massa, sed vulputate quam urna quis eros. Donec vel.</p></div></section><scroll-manager></scroll-manager>");;return buf.join("");
+	buf.push("<section class=\"screen no-padding teaser\"><div class=\"screen-content\"><h1>noxan.</h1><p>software developer</p></div></section><section id=\"work\"><div class=\"container\"><h1>Work</h1><p>A selection of my latest projects. All crafted with love while either working for a company, as a freelancer or one even self funded.</p><div ng-controller=\"ProjectsController as vm\" class=\"projects\"><div ng-repeat=\"project in vm.projects\" class=\"project\"><div background-image=\"{{project.image}}\" class=\"image\"></div><h3>{{project.name}}</h3></div></div><div class=\"clearfix\"></div></div></section><section id=\"technology\" ng-controller=\"TechnologiesController as vm\"><div class=\"container\"><h1>Technology</h1><p>My focus is on state of the art web technologies. I know the full stack as a developer. Sometimes I even do the design. And handling the deployment is mandatory to set sails. Last I have to say that games are fun, building them even more and I consider it still my business.</p><div class=\"technologies\"><div ng-repeat=\"technology in vm.technologies\" ng-style=\"{'background-color': '{{technology.color}}'}\" ng-show=\"technology.show\" class=\"technology\"><span>{{technology.name}}</span></div><div class=\"clearfix\"></div></div><p><a ng-click=\"vm.showAll()\" ng-show=\"vm.hasHidden()\" class=\"technology-show-button\">Your technology is missing? I know some more...</a><div ng-hide=\"vm.hasHidden()\" class=\"technology-additional-info\">Still missing? Awesome, I am always curious to learn!</div></p></div></section><section id=\"about\"><div class=\"container\"><h1>About</h1><p>noxan is the portfolio and website of Richard Stromer. I am a software developer, student and love photography as much as ballroom dancing. I graduated with a bachelor's degree in computer sciences. But I could never wait to get started and took my first position even before beginning to study. You may have a look at <a ui-sref=\"home.work\">what I crafted so far</a> , at <a ui-sref=\"home.technology\">some of my skills</a> or most interesting: <a ui-sref=\"home.contact\">Let's talk about the future!</a></p><p>I am driven by the simple passion to learn, create and explore! Repeatedly.</p></div></section><section id=\"contact\"><div class=\"container\"><h1>Contact</h1><p>I'm always looking for new challanges. You've got a project or could use some support? We need to talk? Just drop me line and let's get in touch.</p><p><a href=\"mailto://hello@noxan.net\">hello@noxan.net</a></p></div></section><scroll-manager></scroll-manager>");;return buf.join("");
 	}
 
 /***/ },
@@ -34034,7 +34069,7 @@
 	var jade_mixins = {};
 	var jade_interp;
 
-	buf.push("<section class=\"small-padding no-margin\"><div class=\"container\"><h1>Labs</h1><p>Some experiments. Some finished. Some undone...</p></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Experiments</h1><p>Some tests. Some prototypes. Something new...</p><div class=\"projects\"><a ng-href=\"{{experiment.website}}\" ng-repeat=\"experiment in labs.experiments\" class=\"project\"><div background-image=\"//placehold.it/400?text={{experiment.name}}\" class=\"image\"></div><h3>{{experiment.name}}</h3></a></div><div class=\"clearfix\"></div></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Projects</h1><p>Some private projects. Some quite outdated. Some still working?</p><div class=\"projects\"><a ng-href=\"{{project.website}}\" ng-repeat=\"project in labs.projects\" class=\"project\"><div background-image=\"//placehold.it/400?text={{project.name}}\" class=\"image\"></div><h3>{{project.name}}</h3></a></div><div class=\"clearfix\"></div></div></section>");;return buf.join("");
+	buf.push("<section class=\"small-padding no-margin\"><div class=\"container\"><h1>Labs</h1><p>Some experiments. Some finished. Some undone...</p></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Experiments</h1><p>Some tests. Some prototypes. Something new...</p><div class=\"projects\"><a ng-href=\"{{experiment.website}}\" ng-repeat=\"experiment in labs.experiments\" class=\"project\"><div background-image=\"{{experiment.image}}\" class=\"image\"></div><h3>{{experiment.name}}</h3></a></div><div class=\"clearfix\"></div></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Projects</h1><p>Some private projects. Some quite outdated. Some still working?</p><div class=\"projects\"><a ng-href=\"{{project.website}}\" ng-repeat=\"project in labs.projects\" class=\"project\"><div background-image=\"{{project.image}}\" class=\"image\"></div><h3>{{project.name}}</h3></a></div><div class=\"clearfix\"></div></div></section>");;return buf.join("");
 	}
 
 /***/ },
@@ -34048,7 +34083,7 @@
 	var jade_mixins = {};
 	var jade_interp;
 
-	buf.push("<div class=\"container\"><h1>Blog</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</p></div>");;return buf.join("");
+	buf.push("<div class=\"container\"><h1>Blog</h1><p>My blog is on the move to the new website.</p><p>Meanwhile feel free to have a look at some old posts on <a href=\"http://noxan.tumblr.com/\">noxan.tumblr.com</a>.</p></div>");;return buf.join("");
 	}
 
 /***/ }
