@@ -4,6 +4,7 @@ require("angular-animate");
 require("angular-scroll");
 require("angular-background-image");
 
+require("./portfolio");
 require("./labs");
 
 angular.module("noxan", [

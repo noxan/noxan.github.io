@@ -1,3 +1,8 @@
+require("./projects");
+require("./technology");
+require("./about");
+require("./contact");
+
 angular.module("noxan.portfolio", [
   "noxan.portfolio.projects",
   "noxan.portfolio.technology",
