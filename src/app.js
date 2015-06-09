@@ -8,6 +8,7 @@ require("./labs");
 
 angular.module("noxan", [
   "ui.router", "ngAnimate", "duScroll", "backgroundImage",
+  "noxan.portfolio",
   "noxan.labs"
 ]);
 
