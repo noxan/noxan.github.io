@@ -10,3 +10,10 @@ section.small-padding
         .image(background-image="//placehold.it/400?text={{experiment.name}}")
         h3 {{experiment.name}}
     .clearfix
+section.small-padding
+  .container
+    .projects
+      a.project(ng-href="{{project.website}}" ng-repeat="project in labs.projects")
+        .image(background-image="//placehold.it/400?text={{project.name}}")
+        h3 {{project.name}}
+    .clearfix

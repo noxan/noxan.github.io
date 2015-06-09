@@ -1,12 +1,17 @@
-[
-  {
-    "name": "aves",
-    "website": "https://github.com/noxan/aves"
-  }, {
-    "name": "jtdge",
-    "website": "https://github.com/noxan/jtdge"
-  }, {
-    "name": "webapp playground",
-    "website": "https://github.com/noxan/webapp-playground"
-  }
-]
+{
+  "experiments": [
+    {
+      "name": "webapp playground",
+      "website": "https://github.com/noxan/webapp-playground"
+    }
+  ],
+  "projects": [
+    {
+      "name": "aves",
+      "website": "https://github.com/noxan/aves"
+    }, {
+      "name": "jtdge",
+      "website": "https://github.com/noxan/jtdge"
+    }
+  ]
+}
