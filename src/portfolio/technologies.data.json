@@ -65,5 +65,14 @@
   }, {
     "name": "C#",
     "color": "#68217A"
+  }, {
+    "name": "Nginx",
+    "color": "#009639"
+  }, {
+    "name": "gulp",
+    "color": "#CF4646"
+  }, {
+    "name": "webpack",
+    "color": "#98B5E0"
   }
 ]
