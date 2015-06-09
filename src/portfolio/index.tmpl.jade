@@ -15,7 +15,7 @@ section#work
 section#technology(ng-controller="TechnologiesController as vm")
   .container
     h1 Technology
-    p My focus is on state of the art web technologies. I know the full stack as a developer. Sometimes I even do the design. And handling the deployment is mandatory to set sails. Building games is fun at last and still my business.
+    p My focus is on state of the art web technologies. I know the full stack as a developer. Sometimes I even do the design. And handling the deployment is mandatory to set sails. Last I have to say that games are fun, building them even more and I consider it still my business.
     .technologies
       .technology(ng-repeat="technology in vm.technologies" ng-style="{'background-color': '{{technology.color}}'}" ng-show="technology.show")
         span {{technology.name}}
