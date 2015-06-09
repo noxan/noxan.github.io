@@ -16,30 +16,20 @@ angular.module("noxan", [
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
     url: "/",
-    params: {
-      scrollTo: "top"
-    },
+    params: { scrollTo: "top" },
     template: require("./portfolio/index.tmpl.jade")
   }).state("home.work", {
     url: "^/work",
-    params: {
-      scrollTo: "work"
-    }
+    params: { scrollTo: "work" }
   }).state("home.technology", {
     url: "^/technology",
-    params: {
-      scrollTo: "technology"
-    }
+    params: { scrollTo: "technology" }
   }).state("home.about", {
     url: "^/about",
-    params: {
-      scrollTo: "about"
-    }
+    params: { scrollTo: "about" }
   }).state("home.contact", {
     url: "^/contact",
-    params: {
-      scrollTo: "contact"
-    }
+    params: { scrollTo: "contact" }
   }).state("demo", {
     url: "/demo",
     template: require("./partials/demo.jade")
