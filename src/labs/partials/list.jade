@@ -5,6 +5,8 @@ section.small-padding.no-margin
 
 section.small-padding
   .container
+    h1 Experiments
+    p Some tests. Some prototypes. Something new...
     .projects
       a.project(ng-href="{{experiment.website}}" ng-repeat="experiment in labs.experiments")
         .image(background-image="//placehold.it/400?text={{experiment.name}}")
@@ -12,6 +14,8 @@ section.small-padding
     .clearfix
 section.small-padding
   .container
+    h1 Projects
+    p Some private projects. Some quite outdated. Some still working?
     .projects
       a.project(ng-href="{{project.website}}" ng-repeat="project in labs.projects")
         .image(background-image="//placehold.it/400?text={{project.name}}")
