@@ -6,6 +6,7 @@ require("angular-background-image");
 
 require("./portfolio");
 require("./labs");
+require("./blog");
 
 require("./core/scroll.directive");
 
@@ -49,5 +50,3 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
 
   $urlRouterProvider.otherwise("/");
 }]);
-
-require("./blog");
