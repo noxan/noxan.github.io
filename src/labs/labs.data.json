@@ -7,6 +7,9 @@
   ],
   "projects": [
     {
+      "name": "As It Seems",
+      "website": "http://globalgamejam.org/2014/games/it-seems"
+    }, {
       "name": "aves",
       "website": "https://github.com/noxan/aves"
     }, {
