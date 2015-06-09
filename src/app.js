@@ -16,8 +16,6 @@ angular.module("noxan", [
 angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider.state("home", {
     url: "/",
-    controller: "HomeController",
-    controllerAs: "ctrl",
     params: {
       scrollTo: "top"
     },
@@ -61,7 +59,6 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
   $urlRouterProvider.otherwise("/");
 }]);
 
-require("./home-controller");
 require("./scroll-directive");
 require("./navigation");
 require("./blog");
