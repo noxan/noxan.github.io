@@ -44,11 +44,63 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// webpack
 	__webpack_require__(1);
-
 	__webpack_require__(4);
 
-	__webpack_require__(9);
+	// start app
+	var angular = __webpack_require__(9);
+	__webpack_require__(11);
+	__webpack_require__(12);
+	__webpack_require__(14);
+	__webpack_require__(15);
+
+	angular.module("noxan", [
+	  "ui.router", "ngAnimate", "duScroll", "backgroundImage",
+	  "noxan.portfolio",
+	  "noxan.labs"
+	]);
+
+	__webpack_require__(16);
+	__webpack_require__(27);
+	__webpack_require__(29);
+
+	__webpack_require__(30);
+
+	angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
+	  $stateProvider.state("home", {
+	    url: "/",
+	    params: { scrollTo: "top" },
+	    template: __webpack_require__(31)
+	  }).state("home.work", {
+	    url: "^/work",
+	    params: { scrollTo: "work" }
+	  }).state("home.technology", {
+	    url: "^/technology",
+	    params: { scrollTo: "technology" }
+	  }).state("home.about", {
+	    url: "^/about",
+	    params: { scrollTo: "about" }
+	  }).state("home.contact", {
+	    url: "^/contact",
+	    params: { scrollTo: "contact" }
+	  }).state("demo", {
+	    url: "/demo",
+	    template: __webpack_require__(32)
+	  }).state("labs", {
+	    url: "/labs",
+	    controller: "LabsController",
+	    controllerAs: "labs",
+	    template: __webpack_require__(33)
+	  }).state("blog", {
+	    url: "/blog",
+	    template: __webpack_require__(34)
+	  });
+
+	  $locationProvider.html5Mode(true);
+
+	  $urlRouterProvider.otherwise("/");
+	}]);
 
 
 /***/ },
@@ -640,83 +692,12 @@
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var angular = __webpack_require__(10);
-	__webpack_require__(12);
-	__webpack_require__(13);
-	__webpack_require__(15);
-	__webpack_require__(16);
-
-	__webpack_require__(17);
-
-	angular.module("noxan", [
-	  "ui.router", "ngAnimate", "duScroll", "backgroundImage",
-	  "noxan.labs"
-	]);
-
-	angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
-	  $stateProvider.state("home", {
-	    url: "/",
-	    controller: "HomeController",
-	    controllerAs: "ctrl",
-	    params: {
-	      scrollTo: "top"
-	    },
-	    template: __webpack_require__(19)
-	  }).state("home.work", {
-	    url: "^/work",
-	    params: {
-	      scrollTo: "work"
-	    },
-	    template: __webpack_require__(19)
-	  }).state("home.technology", {
-	    url: "^/technology",
-	    params: {
-	      scrollTo: "technology"
-	    }
-	  }).state("home.about", {
-	    url: "^/about",
-	    params: {
-	      scrollTo: "about"
-	    }
-	  }).state("home.contact", {
-	    url: "^/contact",
-	    params: {
-	      scrollTo: "contact"
-	    }
-	  }).state("demo", {
-	    url: "/demo",
-	    template: __webpack_require__(20)
-	  }).state("labs", {
-	    url: "/labs",
-	    controller: "LabsController",
-	    controllerAs: "labs",
-	    template: __webpack_require__(21)
-	  }).state("blog", {
-	    url: "/blog",
-	    template: __webpack_require__(22)
-	  });
-
-	  $locationProvider.html5Mode(true);
-
-	  $urlRouterProvider.otherwise("/");
-	}]);
-
-	__webpack_require__(23);
-	__webpack_require__(26);
-	__webpack_require__(27);
-	__webpack_require__(29);
-
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(11);
+	__webpack_require__(10);
 	module.exports = angular;
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var require;/**
@@ -27145,7 +27126,7 @@
 	!window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}</style>');
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -31520,15 +31501,15 @@
 	})(window, window.angular);
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(14);
+	__webpack_require__(13);
 	module.exports = 'ngAnimate';
 
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -33673,14 +33654,14 @@
 
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var duScrollDefaultEasing=function(e){"use strict";return.5>e?Math.pow(2*e,2)/2:1-Math.pow(2*(1-e),2)/2};angular.module("duScroll",["duScroll.scrollspy","duScroll.smoothScroll","duScroll.scrollContainer","duScroll.spyContext","duScroll.scrollHelpers"]).value("duScrollDuration",350).value("duScrollSpyWait",100).value("duScrollGreedy",!1).value("duScrollOffset",0).value("duScrollEasing",duScrollDefaultEasing).value("duScrollCancelOnEvents","scroll mousedown mousewheel touchmove keydown").value("duScrollBottomSpy",!1),angular.module("duScroll.scrollHelpers",["duScroll.requestAnimation"]).run(["$window","$q","cancelAnimation","requestAnimation","duScrollEasing","duScrollDuration","duScrollOffset","duScrollCancelOnEvents",function(e,t,n,r,o,l,u,i){"use strict";var c={},a=function(e){return"undefined"!=typeof HTMLDocument&&e instanceof HTMLDocument||e.nodeType&&e.nodeType===e.DOCUMENT_NODE},s=function(e){return"undefined"!=typeof HTMLElement&&e instanceof HTMLElement||e.nodeType&&e.nodeType===e.ELEMENT_NODE},d=function(e){return s(e)||a(e)?e:e[0]};c.duScrollTo=function(t,n,r,o){var l;if(angular.isElement(t)?l=this.duScrollToElement:angular.isDefined(r)&&(l=this.duScrollToAnimated),l)return l.apply(this,arguments);var u=d(this);return a(u)?e.scrollTo(t,n):(u.scrollLeft=t,void(u.scrollTop=n))};var f,p;c.duScrollToAnimated=function(e,l,u,c){u&&!c&&(c=o);var a=this.duScrollLeft(),s=this.duScrollTop(),d=Math.round(e-a),m=Math.round(l-s),S=null,g=0,h=this,v=function(e){(!e||g&&e.which>0)&&(i&&h.unbind(i,v),n(f),p.reject(),f=null)};if(f&&v(),p=t.defer(),0===u||!d&&!m)return 0===u&&h.duScrollTo(e,l),p.resolve(),p.promise;var y=function(e){null===S&&(S=e),g=e-S;var t=g>=u?1:c(g/u);h.scrollTo(a+Math.ceil(d*t),s+Math.ceil(m*t)),1>t?f=r(y):(i&&h.unbind(i,v),f=null,p.resolve())};return h.duScrollTo(a,s),i&&h.bind(i,v),f=r(y),p.promise},c.duScrollToElement=function(e,t,n,r){var o=d(this);(!angular.isNumber(t)||isNaN(t))&&(t=u);var l=this.duScrollTop()+d(e).getBoundingClientRect().top-t;return s(o)&&(l-=o.getBoundingClientRect().top),this.duScrollTo(0,l,n,r)},c.duScrollLeft=function(t,n,r){if(angular.isNumber(t))return this.duScrollTo(t,this.duScrollTop(),n,r);var o=d(this);return a(o)?e.scrollX||document.documentElement.scrollLeft||document.body.scrollLeft:o.scrollLeft},c.duScrollTop=function(t,n,r){if(angular.isNumber(t))return this.duScrollTo(this.duScrollLeft(),t,n,r);var o=d(this);return a(o)?e.scrollY||document.documentElement.scrollTop||document.body.scrollTop:o.scrollTop},c.duScrollToElementAnimated=function(e,t,n,r){return this.duScrollToElement(e,t,n||l,r)},c.duScrollTopAnimated=function(e,t,n){return this.duScrollTop(e,t||l,n)},c.duScrollLeftAnimated=function(e,t,n){return this.duScrollLeft(e,t||l,n)},angular.forEach(c,function(e,t){angular.element.prototype[t]=e;var n=t.replace(/^duScroll/,"scroll");angular.isUndefined(angular.element.prototype[n])&&(angular.element.prototype[n]=e)})}]),angular.module("duScroll.polyfill",[]).factory("polyfill",["$window",function(e){"use strict";var t=["webkit","moz","o","ms"];return function(n,r){if(e[n])return e[n];for(var o,l=n.substr(0,1).toUpperCase()+n.substr(1),u=0;u<t.length;u++)if(o=t[u]+l,e[o])return e[o];return r}}]),angular.module("duScroll.requestAnimation",["duScroll.polyfill"]).factory("requestAnimation",["polyfill","$timeout",function(e,t){"use strict";var n=0,r=function(e,r){var o=(new Date).getTime(),l=Math.max(0,16-(o-n)),u=t(function(){e(o+l)},l);return n=o+l,u};return e("requestAnimationFrame",r)}]).factory("cancelAnimation",["polyfill","$timeout",function(e,t){"use strict";var n=function(e){t.cancel(e)};return e("cancelAnimationFrame",n)}]),angular.module("duScroll.spyAPI",["duScroll.scrollContainerAPI"]).factory("spyAPI",["$rootScope","$timeout","$window","$document","scrollContainerAPI","duScrollGreedy","duScrollSpyWait","duScrollBottomSpy",function(e,t,n,r,o,l,u,i){"use strict";var c=function(o){var c=!1,a=!1,s=function(){a=!1;var t,u=o.container,c=u[0],s=0;"undefined"!=typeof HTMLElement&&c instanceof HTMLElement||c.nodeType&&c.nodeType===c.ELEMENT_NODE?(s=c.getBoundingClientRect().top,t=Math.round(c.scrollTop+c.clientHeight)>=c.scrollHeight):t=Math.round(n.pageYOffset+n.innerHeight)>=r[0].body.scrollHeight;var d,f,p,m,S,g,h=i&&t?"bottom":"top";for(m=o.spies,f=o.currentlyActive,p=void 0,d=0;d<m.length;d++)S=m[d],g=S.getTargetPosition(),g&&(i&&t||g.top+S.offset-s<20&&(l||-1*g.top+s)<g.height)&&(!p||p[h]<g[h])&&(p={spy:S},p[h]=g[h]);p&&(p=p.spy),f===p||l&&!p||(f&&(f.$element.removeClass("active"),e.$broadcast("duScrollspy:becameInactive",f.$element)),p&&(p.$element.addClass("active"),e.$broadcast("duScrollspy:becameActive",p.$element)),o.currentlyActive=p)};return u?function(){c?a=!0:(s(),c=t(function(){c=!1,a&&s()},u,!1))}:s},a={},s=function(e){var t=e.$id,n={spies:[]};return n.handler=c(n),a[t]=n,e.$on("$destroy",function(){d(e)}),t},d=function(e){var t=e.$id,n=a[t],r=n.container;r&&r.off("scroll",n.handler),delete a[t]},f=s(e),p=function(e){return a[e.$id]?a[e.$id]:e.$parent?p(e.$parent):a[f]},m=function(e){var t,n,r=e.$scope;if(r)return p(r);for(n in a)if(t=a[n],-1!==t.spies.indexOf(e))return t},S=function(e){for(;e.parentNode;)if(e=e.parentNode,e===document)return!0;return!1},g=function(e){var t=m(e);t&&(t.spies.push(e),t.container&&S(t.container)||(t.container&&t.container.off("scroll",t.handler),t.container=o.getContainer(e.$scope),t.container.on("scroll",t.handler).triggerHandler("scroll")))},h=function(e){var t=m(e);e===t.currentlyActive&&(t.currentlyActive=null);var n=t.spies.indexOf(e);-1!==n&&t.spies.splice(n,1),e.$element=null};return{addSpy:g,removeSpy:h,createContext:s,destroyContext:d,getContextForScope:p}}]),angular.module("duScroll.scrollContainerAPI",[]).factory("scrollContainerAPI",["$document",function(e){"use strict";var t={},n=function(e,n){var r=e.$id;return t[r]=n,r},r=function(e){return t[e.$id]?e.$id:e.$parent?r(e.$parent):void 0},o=function(n){var o=r(n);return o?t[o]:e},l=function(e){var n=r(e);n&&delete t[n]};return{getContainerId:r,getContainer:o,setContainer:n,removeContainer:l}}]),angular.module("duScroll.smoothScroll",["duScroll.scrollHelpers","duScroll.scrollContainerAPI"]).directive("duSmoothScroll",["duScrollDuration","duScrollOffset","scrollContainerAPI",function(e,t,n){"use strict";return{link:function(r,o,l){o.on("click",function(o){if(l.href&&-1!==l.href.indexOf("#")||""!==l.duSmoothScroll){var u=l.href?l.href.replace(/.*(?=#[^\s]+$)/,"").substring(1):l.duSmoothScroll,i=document.getElementById(u)||document.getElementsByName(u)[0];if(i&&i.getBoundingClientRect){o.stopPropagation&&o.stopPropagation(),o.preventDefault&&o.preventDefault();var c=l.offset?parseInt(l.offset,10):t,a=l.duration?parseInt(l.duration,10):e,s=n.getContainer(r);s.duScrollToElement(angular.element(i),isNaN(c)?0:c,isNaN(a)?0:a)}}})}}}]),angular.module("duScroll.spyContext",["duScroll.spyAPI"]).directive("duSpyContext",["spyAPI",function(e){"use strict";return{restrict:"A",scope:!0,compile:function(t,n,r){return{pre:function(t,n,r,o){e.createContext(t)}}}}}]),angular.module("duScroll.scrollContainer",["duScroll.scrollContainerAPI"]).directive("duScrollContainer",["scrollContainerAPI",function(e){"use strict";return{restrict:"A",scope:!0,compile:function(t,n,r){return{pre:function(t,n,r,o){r.$observe("duScrollContainer",function(r){angular.isString(r)&&(r=document.getElementById(r)),r=angular.isElement(r)?angular.element(r):n,e.setContainer(t,r),t.$on("$destroy",function(){e.removeContainer(t)})})}}}}}]),angular.module("duScroll.scrollspy",["duScroll.spyAPI"]).directive("duScrollspy",["spyAPI","duScrollOffset","$timeout","$rootScope",function(e,t,n,r){"use strict";var o=function(e,t,n,r){angular.isElement(e)?this.target=e:angular.isString(e)&&(this.targetId=e),this.$scope=t,this.$element=n,this.offset=r};return o.prototype.getTargetElement=function(){return!this.target&&this.targetId&&(this.target=document.getElementById(this.targetId)||document.getElementsByName(this.targetId)[0]),this.target},o.prototype.getTargetPosition=function(){var e=this.getTargetElement();return e?e.getBoundingClientRect():void 0},o.prototype.flushTargetCache=function(){this.targetId&&(this.target=void 0)},{link:function(l,u,i){var c,a=i.ngHref||i.href;a&&-1!==a.indexOf("#")?c=a.replace(/.*(?=#[^\s]+$)/,"").substring(1):i.duScrollspy?c=i.duScrollspy:i.duSmoothScroll&&(c=i.duSmoothScroll),c&&n(function(){var n=new o(c,l,u,-(i.offset?parseInt(i.offset,10):t));e.addSpy(n),l.$on("$locationChangeSuccess",n.flushTargetCache.bind(n));var a=r.$on("$stateChangeSuccess",n.flushTargetCache.bind(n));l.$on("$destroy",function(){e.removeSpy(n),a()})},0,!1)}}}]);
 	//# sourceMappingURL=angular-scroll.min.js.map
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	angular.module("backgroundImage", []);
@@ -33699,118 +33680,72 @@
 
 
 /***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(17);
+	__webpack_require__(21);
+	__webpack_require__(25);
+	__webpack_require__(26);
+
+	angular.module("noxan.portfolio", [
+	  "noxan.portfolio.projects",
+	  "noxan.portfolio.technologies",
+	  "noxan.portfolio.about",
+	  "noxan.portfolio.contact"
+	]);
+
+
+/***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	angular.module("noxan.labs", []);
+	angular.module("noxan.portfolio.projects", []);
 
-	angular.module("noxan.labs").controller("LabsController", [function () {
-	  var ctrl = this;
-
-	  ctrl.experiments = __webpack_require__(18).experiments;
-	  ctrl.projects = __webpack_require__(18).projects;
-	}]);
+	__webpack_require__(18);
+	__webpack_require__(19);
 
 
 /***/ },
 /* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = {
-		"experiments": [
-			{
-				"name": "webapp playground",
-				"website": "https://github.com/noxan/webapp-playground"
-			}
-		],
-		"projects": [
-			{
-				"name": "aves",
-				"website": "https://github.com/noxan/aves"
-			},
-			{
-				"name": "jtdge",
-				"website": "https://github.com/noxan/jtdge"
-			}
-		]
+	function ProjectsController(Projects) {
+	  var vm = this;
+
+	  vm.projects = Projects.all();
 	}
+	ProjectsController.$inject = ["Projects"];
+
+	angular.module("noxan.portfolio.projects").controller("ProjectsController", ProjectsController);
+
 
 /***/ },
 /* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var jade = __webpack_require__(2);
+	function Projects() {
+	  var projects = __webpack_require__(20);
 
-	module.exports = function template(locals) {
-	var buf = [];
-	var jade_mixins = {};
-	var jade_interp;
-
-	buf.push("<section class=\"screen no-padding teaser\"><div class=\"screen-content\"><h1>noxan.</h1><p>software developer</p></div></section><section id=\"work\"><div class=\"container\"><h1>Work</h1><p>A selection of my latest projects.</p><div class=\"projects\"><div ng-repeat=\"project in ctrl.projects\" class=\"project\"><div background-image=\"{{project.image}}\" class=\"image\"></div><h3>{{project.name}}</h3></div></div><div class=\"clearfix\"></div></div></section><section id=\"technology\"><div class=\"container\"><h1>Technology</h1><p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit.</p><div class=\"technologies\"><div ng-repeat=\"technology in ctrl.technologies\" ng-style=\"{'background-color': '{{technology.color}}'}\" class=\"technology\"><span>{{technology.name}}</span></div><div class=\"clearfix\"></div></div></div></section><section id=\"about\"><div class=\"container\"><h1>About</h1><p>Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt. Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.</p></div></section><section id=\"contact\"><div class=\"container\"><h1>Contact</h1><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In euismod ultrices facilisis. Vestibulum porta sapien adipiscing augue congue id pretium lectus molestie. Proin quis dictum nisl. Morbi id quam sapien, sed vestibulum sem. Duis elementum rutrum mauris sed convallis. Proin vestibulum magna mi. Aenean tristique hendrerit magna, ac facilisis nulla hendrerit ut. Sed non tortor sodales quam auctor elementum. Donec hendrerit nunc eget elit pharetra pulvinar. Suspendisse id tempus tortor. Aenean luctus, elit commodo laoreet commodo, justo nisi consequat massa, sed vulputate quam urna quis eros. Donec vel.</p></div></section><scroll-manager></scroll-manager>");;return buf.join("");
-	}
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var jade = __webpack_require__(2);
-
-	module.exports = function template(locals) {
-	var buf = [];
-	var jade_mixins = {};
-	var jade_interp;
-
-	buf.push("<section class=\"screen no-padding\"><div class=\"screen-content\"><h1>Curabitur venenatis pulvinar</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</p><p><a ui-sref=\"home\">Home</a></p></div></section><section><div class=\"container\"><h2>Vestibulum porta sapien adipiscing</h2><p>Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</p><p><a ui-sref=\"home\">Home</a></p></div></section>");;return buf.join("");
-	}
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var jade = __webpack_require__(2);
-
-	module.exports = function template(locals) {
-	var buf = [];
-	var jade_mixins = {};
-	var jade_interp;
-
-	buf.push("<section class=\"small-padding no-margin\"><div class=\"container\"><h1>Labs</h1><p>Some experiments. Some finished. Some undone...</p></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Experiments</h1><p>Some tests. Some prototypes. Something new...</p><div class=\"projects\"><a ng-href=\"{{experiment.website}}\" ng-repeat=\"experiment in labs.experiments\" class=\"project\"><div background-image=\"//placehold.it/400?text={{experiment.name}}\" class=\"image\"></div><h3>{{experiment.name}}</h3></a></div><div class=\"clearfix\"></div></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Projects</h1><p>Some private projects. Some quite outdated. Some still working?</p><div class=\"projects\"><a ng-href=\"{{project.website}}\" ng-repeat=\"project in labs.projects\" class=\"project\"><div background-image=\"//placehold.it/400?text={{project.name}}\" class=\"image\"></div><h3>{{project.name}}</h3></a></div><div class=\"clearfix\"></div></div></section>");;return buf.join("");
-	}
-
-/***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var jade = __webpack_require__(2);
-
-	module.exports = function template(locals) {
-	var buf = [];
-	var jade_mixins = {};
-	var jade_interp;
-
-	buf.push("<div class=\"container\"><h1>Blog</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</p></div>");;return buf.join("");
-	}
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	angular.module("noxan").controller("HomeController", [function () {
-	  var ctrl = this;
-
-	  ctrl.projects = __webpack_require__(24).map(function (project) {
+	  projects.forEach(function (project) {
 	    if (!project.hasOwnProperty("image")) {
 	      project.image = "//placehold.it/400?text=" + project.name;
 	    }
-	    return project;
 	  });
 
-	  ctrl.technologies = __webpack_require__(25);
-	}]);
+	  return {
+	    all: function () {
+	      return projects;
+	    }
+	  };
+	}
+	Projects.$inject = [];
+
+	angular.module("noxan.portfolio.projects").service("Projects", Projects);
 
 
 /***/ },
-/* 24 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
@@ -33841,7 +33776,47 @@
 	]
 
 /***/ },
-/* 25 */
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	angular.module("noxan.portfolio.technologies", []);
+
+	__webpack_require__(22);
+	__webpack_require__(23);
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	function TechnologiesController(Technologies) {
+	  var vm = this;
+
+	  vm.technologies = Technologies.all();
+	}
+	TechnologiesController.$inject = ["Technologies"];
+
+	angular.module("noxan.portfolio.technologies").controller("TechnologiesController", TechnologiesController);
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	function Technologies() {
+	  return {
+	    all: function () {
+	      return __webpack_require__(24);
+	    }
+	  };
+	}
+	Technologies.$inject = [];
+
+	angular.module("noxan.portfolio.technologies").service("Technologies", Technologies);
+
+
+/***/ },
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
@@ -33936,7 +33911,64 @@
 	]
 
 /***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	angular.module("noxan.portfolio.about", []);
+
+
+/***/ },
 /* 26 */
+/***/ function(module, exports, __webpack_require__) {
+
+	angular.module("noxan.portfolio.contact", []);
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	angular.module("noxan.labs", []);
+
+	angular.module("noxan.labs").controller("LabsController", [function () {
+	  var ctrl = this;
+
+	  ctrl.experiments = __webpack_require__(28).experiments;
+	  ctrl.projects = __webpack_require__(28).projects;
+	}]);
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = {
+		"experiments": [
+			{
+				"name": "webapp playground",
+				"website": "https://github.com/noxan/webapp-playground"
+			}
+		],
+		"projects": [
+			{
+				"name": "aves",
+				"website": "https://github.com/noxan/aves"
+			},
+			{
+				"name": "jtdge",
+				"website": "https://github.com/noxan/jtdge"
+			}
+		]
+	}
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+
+/***/ },
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var scrollHandler = function (state, $document) {
@@ -33964,18 +33996,7 @@
 
 
 /***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	angular.module("noxan").directive("navigation", [function () {
-	  return {
-	    template: __webpack_require__(28)
-	  };
-	}]);
-
-
-/***/ },
-/* 28 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var jade = __webpack_require__(2);
@@ -33985,14 +34006,50 @@
 	var jade_mixins = {};
 	var jade_interp;
 
-	buf.push("<ul class=\"left\"><li ui-sref-active-eq=\"active\"><a ui-sref=\"home\">Home</a></li><li ui-sref-active=\"active\"><a ui-sref=\"home.work\">Work</a></li><li ui-sref-active=\"active\"><a ui-sref=\"home.technology\">Technology</a></li><li ui-sref-active=\"active\"><a ui-sref=\"home.about\">About</a></li><li ui-sref-active=\"active\"><a ui-sref=\"home.contact\">Contact</a></li></ul><ul class=\"right\"><li ui-sref-active=\"active\"><a ui-sref=\"labs\">Labs</a></li><li ui-sref-active=\"active\"><a ui-sref=\"blog\">Blog</a></li></ul>");;return buf.join("");
+	buf.push("<section class=\"screen no-padding teaser\"><div class=\"screen-content\"><h1>noxan.</h1><p>software developer</p></div></section><section id=\"work\"><div class=\"container\"><h1>Work</h1><p>A selection of my latest projects.</p><div ng-controller=\"ProjectsController as vm\" class=\"projects\"><div ng-repeat=\"project in vm.projects\" class=\"project\"><div background-image=\"{{project.image}}\" class=\"image\"></div><h3>{{project.name}}</h3></div></div><div class=\"clearfix\"></div></div></section><section id=\"technology\"><div class=\"container\"><h1>Technology</h1><p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit.</p><div ng-controller=\"TechnologiesController as vm\" class=\"technologies\"><div ng-repeat=\"technology in vm.technologies\" ng-style=\"{'background-color': '{{technology.color}}'}\" class=\"technology\"><span>{{technology.name}}</span></div><div class=\"clearfix\"></div></div></div></section><section id=\"about\"><div class=\"container\"><h1>About</h1><p>Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque. Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt. Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.</p></div></section><section id=\"contact\"><div class=\"container\"><h1>Contact</h1><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In euismod ultrices facilisis. Vestibulum porta sapien adipiscing augue congue id pretium lectus molestie. Proin quis dictum nisl. Morbi id quam sapien, sed vestibulum sem. Duis elementum rutrum mauris sed convallis. Proin vestibulum magna mi. Aenean tristique hendrerit magna, ac facilisis nulla hendrerit ut. Sed non tortor sodales quam auctor elementum. Donec hendrerit nunc eget elit pharetra pulvinar. Suspendisse id tempus tortor. Aenean luctus, elit commodo laoreet commodo, justo nisi consequat massa, sed vulputate quam urna quis eros. Donec vel.</p></div></section><scroll-manager></scroll-manager>");;return buf.join("");
 	}
 
 /***/ },
-/* 29 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
+	var jade = __webpack_require__(2);
+
+	module.exports = function template(locals) {
+	var buf = [];
+	var jade_mixins = {};
+	var jade_interp;
+
+	buf.push("<section class=\"screen no-padding\"><div class=\"screen-content\"><h1>Curabitur venenatis pulvinar</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</p><p><a ui-sref=\"home\">Home</a></p></div></section><section><div class=\"container\"><h2>Vestibulum porta sapien adipiscing</h2><p>Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.</p><p><a ui-sref=\"home\">Home</a></p></div></section>");;return buf.join("");
+	}
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var jade = __webpack_require__(2);
+
+	module.exports = function template(locals) {
+	var buf = [];
+	var jade_mixins = {};
+	var jade_interp;
+
+	buf.push("<section class=\"small-padding no-margin\"><div class=\"container\"><h1>Labs</h1><p>Some experiments. Some finished. Some undone...</p></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Experiments</h1><p>Some tests. Some prototypes. Something new...</p><div class=\"projects\"><a ng-href=\"{{experiment.website}}\" ng-repeat=\"experiment in labs.experiments\" class=\"project\"><div background-image=\"//placehold.it/400?text={{experiment.name}}\" class=\"image\"></div><h3>{{experiment.name}}</h3></a></div><div class=\"clearfix\"></div></div></section><section class=\"small-padding\"><div class=\"container\"><h1>Projects</h1><p>Some private projects. Some quite outdated. Some still working?</p><div class=\"projects\"><a ng-href=\"{{project.website}}\" ng-repeat=\"project in labs.projects\" class=\"project\"><div background-image=\"//placehold.it/400?text={{project.name}}\" class=\"image\"></div><h3>{{project.name}}</h3></a></div><div class=\"clearfix\"></div></div></section>");;return buf.join("");
+	}
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var jade = __webpack_require__(2);
+
+	module.exports = function template(locals) {
+	var buf = [];
+	var jade_mixins = {};
+	var jade_interp;
+
+	buf.push("<div class=\"container\"><h1>Blog</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor.</p></div>");;return buf.join("");
+	}
 
 /***/ }
 /******/ ]);
