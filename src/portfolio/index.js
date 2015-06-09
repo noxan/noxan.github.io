@@ -1,4 +1,4 @@
-require("./projects");
+require("./projects.module");
 require("./technology");
 require("./about");
 require("./contact");

@@ -7,8 +7,8 @@ section#work
   .container
     h1 Work
     p A selection of my latest projects.
-    .projects
-      .project(ng-repeat="project in ctrl.projects")
+    .projects(ng-controller="ProjectsController as vm")
+      .project(ng-repeat="project in vm.projects")
         .image(background-image="{{project.image}}")
         h3 {{project.name}}
     .clearfix
