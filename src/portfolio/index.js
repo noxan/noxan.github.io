@@ -1,7 +1,7 @@
 require("./projects.module");
 require("./technologies.module");
-require("./about");
-require("./contact");
+require("./about.module");
+require("./contact.module");
 
 angular.module("noxan.portfolio", [
   "noxan.portfolio.projects",
