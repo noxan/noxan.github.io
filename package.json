@@ -1,6 +1,6 @@
 {
   "name": "noxan.net",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Personal website and portfolio.",
   "main": "src/index.js",
   "scripts": {
