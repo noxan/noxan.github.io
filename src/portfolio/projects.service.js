@@ -1,7 +1,15 @@
 function Projects() {
+  var projects = require("./projects.data.json");
+
+  projects.forEach(function (project) {
+    if (!project.hasOwnProperty("image")) {
+      project.image = "//placehold.it/400?text=" + project.name;
+    }
+  });
+
   return {
     all: function () {
-      return require("./projects.data.json");
+      return projects;
     }
   };
 }
