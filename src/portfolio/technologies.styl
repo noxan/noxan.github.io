@@ -20,3 +20,17 @@
       left 50%
       transform translate(-50%, -50%)
       margin 0
+
+    opacity 1
+    transform scale(1)
+
+    &.ng-hide
+      opacity 0
+      transform scale(.5)
+
+.technology-show-button
+  transition transition-time transition-timing-function
+  cursor pointer
+  opacity 1
+  &.ng-hide
+    opacity 0

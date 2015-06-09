@@ -12,14 +12,16 @@ section#work
         .image(background-image="{{project.image}}")
         h3 {{project.name}}
     .clearfix
-section#technology
+section#technology(ng-controller="TechnologiesController as vm")
   .container
     h1 Technology
     p Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum. Ut dolor diam, elementum et vestibulum eu, porttitor vel elit.
-    .technologies(ng-controller="TechnologiesController as vm")
-      .technology(ng-repeat="technology in vm.technologies" ng-style="{'background-color': '{{technology.color}}'}")
+    .technologies
+      .technology(ng-repeat="technology in vm.technologies" ng-style="{'background-color': '{{technology.color}}'}" ng-show="technology.show")
         span {{technology.name}}
       .clearfix
+    p
+      a(ng-click="vm.showAll()" ng-show="vm.hasHidden()").technology-show-button Show more
 section#about
   .container
     h1 About
