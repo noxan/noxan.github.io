@@ -1,6 +1,6 @@
 deploy:
 	git checkout master
-	webpack
+	npm run build
 	git checkout gh-pages
 	cp dist/index.html .
 	cp dist/index.html 404.html
