@@ -2,20 +2,27 @@
   {
     "name": "moonid",
     "website": "http://www.moonid.net",
+    "description": "moonID is a gaming portal offering easy and instant access to a wide range of different online games.",
     "image": "https://noxan.github.io/images/projects/moonid.jpg"
   }, {
     "name": "myBraintraining",
+    "description": "A browser based online brain training platform featuring over 30 exercises.",
     "website": "http://www.mybraintraining.com",
     "image": "https://noxan.github.io/images/projects/mybraintraining.jpg"
   }, {
-    "name": "magnet"
+    "name": "magnet",
+    "description": "Core and customer data management software for a client in the textile industry."
   }, {
-    "name": "Speedlane"
+    "name": "Speedlane",
+    "description": "Lane racing game with web target and competitive highscore tracking."
   }, {
     "name": "devisio",
+    "description": "Private project featuring different photographers.",
     "website": "https://www.devisio.net",
     "image": "https://noxan.github.io/images/projects/devisio.jpg"
   }, {
-    "name": "Bierbaum"
+    "name": "Bierbaum",
+    "description": "Cross platform mobile app to digitally collect crown caps.",
+    "website": "http://www.derbierbaum.de"
   }
 ]
