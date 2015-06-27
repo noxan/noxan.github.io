@@ -1,0 +1,8 @@
+h1 {{project.name}}
+
+p {{project.description}}
+
+dl(ng-if="project.website")
+  dt Website
+  dd
+    a(href="{{project.website}}") {{project.website}}
