@@ -7,6 +7,7 @@ function ProjectsController(Projects, ngDialog) {
     ngDialog.open({
       template: require("./projects.detail.tmpl.jade")(),
       plain: true,
+      className: "ngdialog-theme-noxan",
       controller: ["$scope", function ($scope) {
         $scope.project = project;
       }]
