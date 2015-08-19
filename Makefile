@@ -1,3 +1,6 @@
+clean:
+	rm -rf dist
+
 deploy:
 	git checkout develop
 	npm run build
