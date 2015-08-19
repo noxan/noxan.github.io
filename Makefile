@@ -11,3 +11,5 @@ deploy:
 	git commit -m "build and release new version"
 	git push origin master
 	git checkout develop
+
+all: clean deploy
