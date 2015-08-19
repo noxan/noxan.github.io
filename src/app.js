@@ -40,14 +40,17 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
     params: { scrollTo: "contact" }
   }).state("demo", {
     url: "/demo",
+    params: { scrollTo: "top" },
     template: require("./core/demo.tmpl.jade")
   }).state("labs", {
     url: "/labs",
+    params: { scrollTo: "top" },
     controller: "LabsController",
     controllerAs: "labs",
     template: require("./labs/partials/list.jade")
   }).state("blog", {
     url: "/blog",
+    params: { scrollTo: "top" },
     template: require("./blog/partials/list.jade")
   });
 
