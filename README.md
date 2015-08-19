@@ -10,4 +10,4 @@ Install dependencies:
 
 Run development server:
 
-    $ npm run dev
+    $ npm start
