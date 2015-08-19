@@ -3,12 +3,12 @@ module.exports = [
     "name": "moonid",
     "website": "http://www.moonid.net",
     "description": "moonID is a gaming portal offering easy and instant access to a wide range of different online games.",
-    "image": "https://noxan.github.io/images/projects/moonid.jpg"
+    "image": require("../../res/projects/moonid.jpg")
   }, {
     "name": "myBraintraining",
     "description": "A browser based online brain training platform featuring over 30 exercises.",
     "website": "http://www.mybraintraining.com",
-    "image": "https://noxan.github.io/images/projects/mybraintraining.jpg"
+    "image": require("../../res/projects/mybraintraining.jpg")
   }, {
     "name": "magnet",
     "description": "Core and customer data management software for a client in the textile industry."
