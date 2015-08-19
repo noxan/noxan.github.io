@@ -1,5 +1,5 @@
 function Projects() {
-  var projects = require("./projects.data.json");
+  var projects = require("./projects.data.js");
 
   projects.forEach(function (project) {
     if (!project.hasOwnProperty("image")) {

@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "name": "moonid",
     "website": "http://www.moonid.net",
@@ -19,10 +19,10 @@
     "name": "devisio",
     "description": "Private project featuring different photographers.",
     "website": "https://www.devisio.net",
-    "image": "https://noxan.github.io/images/projects/devisio.jpg"
+    "image": require("../../res/projects/devisio.jpg")
   }, {
     "name": "Bierbaum",
     "description": "Cross platform mobile app to digitally collect crown caps.",
     "website": "http://www.derbierbaum.de"
   }
-]
+];
