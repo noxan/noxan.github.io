@@ -8,9 +8,11 @@ require("angular-ui-router");
 require("angular-animate");
 require("angular-scroll");
 require("angular-background-image");
+require("angular-google-analytics");
 
 angular.module("noxan", [
   "ui.router", "ngAnimate", "duScroll", "backgroundImage",
+  "angular-google-analytics",
   "noxan.portfolio",
   "noxan.labs"
 ]);
@@ -58,3 +60,13 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
 
   $urlRouterProvider.otherwise("/");
 }]);
+
+
+function AnalyticsConfig(AnalyticsProvider) {
+  AnalyticsProvider.setAccount('UA-52375070-1');
+  AnalyticsProvider.trackPages(true);
+}
+AnalyticsConfig.$inject = ['AnalyticsProvider'];
+
+
+angular.module("noxan").config(AnalyticsConfig);
