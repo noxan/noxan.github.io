@@ -60,3 +60,13 @@ angular.module("noxan").config(["$stateProvider", "$urlRouterProvider", "$locati
 
   $urlRouterProvider.otherwise("/");
 }]);
+
+
+function AnalyticsConfig(AnalyticsProvider) {
+  AnalyticsProvider.setAccount('UA-52375070-1');
+  AnalyticsProvider.trackPages(true);
+}
+AnalyticsConfig.$inject = ['AnalyticsProvider'];
+
+
+angular.module("noxan").config(AnalyticsConfig);
