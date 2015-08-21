@@ -8,9 +8,11 @@ require("angular-ui-router");
 require("angular-animate");
 require("angular-scroll");
 require("angular-background-image");
+require("angular-google-analytics");
 
 angular.module("noxan", [
   "ui.router", "ngAnimate", "duScroll", "backgroundImage",
+  "angular-google-analytics",
   "noxan.portfolio",
   "noxan.labs"
 ]);
