@@ -70,3 +70,6 @@ AnalyticsConfig.$inject = ['AnalyticsProvider'];
 
 
 angular.module("noxan").config(AnalyticsConfig);
+
+angular.module("noxan").run(['Analytics', function (Analytics) {
+}]);
