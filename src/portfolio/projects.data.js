@@ -14,7 +14,8 @@ module.exports = [
     "description": "Core and customer data management software for a client in the textile industry."
   }, {
     "name": "Speedlane",
-    "description": "Lane racing game with web target and competitive highscore tracking."
+    "description": "Lane racing game with web target and competitive highscore tracking.",
+    "image": require("../../res/projects/speedlane.jpg")
   }, {
     "name": "devisio",
     "description": "Private project featuring different photographers.",
