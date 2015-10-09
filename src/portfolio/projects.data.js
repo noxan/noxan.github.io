@@ -24,6 +24,7 @@ module.exports = [
   }, {
     "name": "Bierbaum",
     "description": "Cross platform mobile app to digitally collect crown caps.",
-    "website": "http://www.derbierbaum.de"
+    "website": "http://www.derbierbaum.de",
+    "image": require("../../res/projects/bierbaum.jpg")
   }
 ];
