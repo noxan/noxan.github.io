@@ -4,6 +4,10 @@
       "name": "webapp playground",
       "image": "//placehold.it/400?text=web+app",
       "website": "https://github.com/noxan/webapp-playground"
+    }, {
+      "name": "android navdrawer",
+      "image": "//placehold.it/400?text=android+navdrawer",
+      "website": "https://github.com/noxan/android-navdrawer-example"
     }
   ],
   "projects": [
