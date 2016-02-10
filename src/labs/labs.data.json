@@ -12,6 +12,10 @@
   ],
   "projects": [
     {
+      "name": "Ritual Lemmings",
+      "image": "http://globalgamejam.org/sites/default/files/styles/game_sidebar__wide/public/game/featured_image/titelbild.png",
+      "website": "http://globalgamejam.org/2016/games/ritualemmings"
+    }, {
       "name": "As It Seems",
       "image": "http://globalgamejam.org/sites/default/files/styles/game_sidebar__wide/public/game/featured_image/screenshot_03_0_0.png",
       "website": "http://globalgamejam.org/2014/games/it-seems"
