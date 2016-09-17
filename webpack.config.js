@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: {
     bundle: "./src/app.js",
@@ -24,6 +26,11 @@ module.exports = {
       loader: "jshint-loader"
     }]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html.jade'
+    }),
+  ],
   devServer: {
     contentBase: "./dist/",
     host: "0.0.0.0",

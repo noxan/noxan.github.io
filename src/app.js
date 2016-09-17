@@ -1,5 +1,4 @@
 // webpack
-require("./index.html.jade");
 require("./main.styl");
 
 // start app
