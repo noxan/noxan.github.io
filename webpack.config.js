@@ -1,3 +1,4 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
     loaders: [
       { test: /\.json$/, loader: "json-loader" },
       { test: /(?!\.html)\.jade$/, loader: "jade-loader?context=./src" },
-      { test: /\.styl$/, loader: "style-loader!css-loader!autoprefixer-loader!stylus-loader" },
+      { test: /\.styl$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!autoprefixer-loader!stylus-loader') },
       { test: /\.(jpe?g|png|gif|svg)$/i, loaders: [ 'file?hash=sha512&digest=hex&name=[hash].[ext]', 'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false' ] }
     ],
     preLoaders: [{
@@ -30,6 +31,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html.jade'
     }),
+    new ExtractTextPlugin('styles.css'),
   ],
   devServer: {
     contentBase: "./dist/",
