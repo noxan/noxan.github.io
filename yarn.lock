@@ -315,10 +315,10 @@ angular-google-analytics@0.0.18:
   resolved "https://registry.yarnpkg.com/angular-google-analytics/-/angular-google-analytics-0.0.18.tgz#c21c9ca3484b92c963ea49df88bd1e6e724a0ff5"
   integrity sha1-whyco0hLkslj6knfiL0ebnJKD/U=
 
-angular-scroll@0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/angular-scroll/-/angular-scroll-0.7.2.tgz#eaa8246f68607dd97b3f60e0c6a858c2e112effc"
-  integrity sha1-6qgkb2hgfdl7P2DgxqhYwuES7/w=
+angular-scroll@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/angular-scroll/-/angular-scroll-1.0.2.tgz#2768ff35dbe1ce40e0c3fbedd4534888299c3e2d"
+  integrity sha1-J2j/NdvhzkDgw/vt1FNIiCmcPi0=
 
 angular-ui-router@0.2.15:
   version "0.2.15"
