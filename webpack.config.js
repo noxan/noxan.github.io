@@ -35,18 +35,6 @@ module.exports = {
           "file?hash=sha512&digest=hex&name=[hash].[ext]",
           "image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false"
         ]
-      },
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "jscs-loader"
-      },
-      {
-        enforce: "pre",
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "jshint-loader"
       }
     ]
   },
