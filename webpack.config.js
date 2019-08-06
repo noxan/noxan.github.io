@@ -25,7 +25,12 @@ module.exports = {
             }
           },
           "css-loader",
-          "autoprefixer-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: () => [require("autoprefixer")]
+            }
+          },
           "stylus-loader"
         ]
       },
