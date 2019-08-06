@@ -1,4 +1,5 @@
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -6,20 +7,27 @@ module.exports = {
     bundle: "./src/app.js"
   },
   output: {
-    path: "./dist/",
+    path: path.resolve(__dirname, "/dist/"),
     filename: "[name].[hash].js",
     publicPath: "/"
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.json$/, loader: "json-loader" },
       { test: /(?!\.html)\.jade$/, loader: "jade-loader?context=./src" },
       {
         test: /\.styl$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader: "css-loader!autoprefixer-loader!stylus-loader"
-        })
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === "development"
+            }
+          },
+          "css-loader",
+          "autoprefixer-loader",
+          "stylus-loader"
+        ]
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -27,15 +35,15 @@ module.exports = {
           "file?hash=sha512&digest=hex&name=[hash].[ext]",
           "image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false"
         ]
-      }
-    ],
-    preLoaders: [
+      },
       {
+        enforce: "pre",
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "jscs-loader"
       },
       {
+        enforce: "pre",
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "jshint-loader"
@@ -46,7 +54,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html.jade"
     }),
-    new ExtractTextPlugin("styles.css")
+    new MiniCssExtractPlugin({
+      filename: "styles.css"
+      // filename: '[name].css',
+      // chunkFilename: '[id].css',
+      // ignoreOrder: false, // Enable to remove warnings about conflicting order
+    })
   ],
   devServer: {
     contentBase: "./dist/",
