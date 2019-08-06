@@ -13,7 +13,6 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.json$/, loader: "json-loader" },
       { test: /(?!\.html)\.jade$/, loader: "jade-loader?context=./src" },
       {
         test: /\.styl$/,

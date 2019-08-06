@@ -44,7 +44,6 @@
     "imagemin": "7.0.0",
     "jade": "1.11.0",
     "jade-loader": "0.8.0",
-    "json-loader": "0.5.7",
     "mini-css-extract-plugin": "^0.8.0",
     "node-libs-browser": "0.6.0",
     "postcss-loader": "^3.0.0",
