@@ -325,10 +325,10 @@ angular-ui-router@0.2.15:
   resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-0.2.15.tgz#87b61ba8f2bce85895c6679a0f93f0ab976cbae5"
   integrity sha1-h7YbqPK86FiVxmeaD5Pwq5dsuuU=
 
-angular@1.7.8:
-  version "1.7.8"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.8.tgz#b77ede272ce1b261e3be30c1451a0b346905a3c9"
-  integrity sha512-wtef/y4COxM7ZVhddd7JtAAhyYObq9YXKar9tsW7558BImeVYteJiTxCKeJOL45lJ/+7B4wrAC49j8gTFYEthg==
+angular@1.7.9:
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.9.tgz#e52616e8701c17724c3c238cfe4f9446fd570bc4"
+  integrity sha512-5se7ZpcOtu0MBFlzGv5dsM1quQDoDeUTwZrWjGtTNA7O88cD8TEk5IEKCTDa3uECV9XnvKREVUr7du1ACiWGFQ==
 
 ansi-colors@^3.0.0:
   version "3.2.4"
